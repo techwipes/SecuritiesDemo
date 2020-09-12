@@ -56,7 +56,7 @@ public class SecurityController {
     @PostMapping("/security-update")
     public String updateUser(Security security) {
         securityService.createSecurity(security);
-        return "redirect:/security";
+        return "redirect:/securities";
     }
 
 
