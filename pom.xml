@@ -13,7 +13,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>securities</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Demo app for TotSystems</description>
 
 	<properties>
 		<java.version>14</java.version>
