@@ -19,24 +19,20 @@ public class SecurityService {
         this.securityRepository = securityRepository;
     }
 
-    public Security findById(Integer id){
+    public Security findById(Integer id) {
         return securityRepository.getOne(id);
     }
 
-    public List<Security> findAll(){
+    public List<Security> findAll() {
         return securityRepository.findAll();
-
     }
 
-    public Security createSecurity(Security security){
+    public Security createSecurity(Security security) {
         return securityRepository.save(security);
     }
 
-    public void deleteById(Integer id){
+    public void deleteById(Integer id) {
         securityRepository.deleteById(id);
-
     }
-
-
 
 }
