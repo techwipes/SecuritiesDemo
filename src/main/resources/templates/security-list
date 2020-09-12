@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Securities</title>
+</head>
+<body>
+<div th:switch="${securities}">
+    <h2 th:case="null">No securities found!</h2>
+    <div th:case="*">
+        <h2>Securities</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Security name</th>
+                <th>Short name</th>
+                <th>Sec ID</th>
+                <th>Reg number</th>
+                <th>Emitent title</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="security : ${securities}">
+                <td th:text="${security.id}"></td>
+                <td th:text="${security.securityName}"></td>
+                <td th:text="${security.short_name}"></td>
+                <td th:text="${security.secId}"></td>
+                <td th:text="${security.regNumber}"></td>
+                <td th:text="${security.emitentTitle}"></td>
+                <td><a th:href="@{security-update/{id}(id=${security.id})}">Edit</a></td>
+                <td><a th:href="@{security-delete/{id}(id=${security.id})}">Delete</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <p><a href="/user-create">Create security</a></p>
+</div>
+</body>
+</html>
