@@ -26,7 +26,7 @@ public class SecurityController {
     public String findAll(Model model) {
         List<Security> securities = securityService.findAll();
         model.addAttribute("securities", securities);
-        return "security-list";
+        return "securities-data";
     }
 
     @GetMapping("/security-create")
