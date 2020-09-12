@@ -12,7 +12,6 @@ public class Security {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
     @Column(name = "security_name")
     private String securityName;
     @Column(name = "short_name")
