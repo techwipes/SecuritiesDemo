@@ -23,38 +23,38 @@ public class SecurityController {
     }
 
     @GetMapping("/securities")
-    public String findAll(Model model){
+    public String findAll(Model model) {
         List<Security> securities = securityService.findAll();
         model.addAttribute("securities", securities);
-
         return "security-list";
     }
 
     @GetMapping("/security-create")
-    public String createSecurityForm(Security security){
+    public String createSecurityForm(Security security) {
         return "security-create";
     }
 
     @PostMapping
-    public String createSecurity(Security security){
+    public String createSecurity(Security security) {
         securityService.createSecurity(security);
-        return  "redirect:/securities";
+        return "redirect:/securities";
     }
+
     @GetMapping("security-delete/{id}")
-    public String deleteSecurity(@PathVariable("id") Integer id){
+    public String deleteSecurity(@PathVariable("id") Integer id) {
         securityService.deleteById(id);
         return "redirect:/securities";
     }
 
     @GetMapping("/security-update/{id}")
-    public String updateSecurityForm(@PathVariable("id")  Integer id, Model model){
+    public String updateSecurityForm(@PathVariable("id") Integer id, Model model) {
         Security security = securityService.findById(id);
         model.addAttribute("security", security);
         return "security-update";
     }
 
     @PostMapping("/security-update")
-    public String updateUser(Security security){
+    public String updateUser(Security security) {
         securityService.createSecurity(security);
         return "redirect:/security";
     }
