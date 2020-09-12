@@ -27,7 +27,7 @@
             <tr th:each="security : ${securities}">
                 <td th:text="${security.id}"></td>
                 <td th:text="${security.securityName}"></td>
-                <td th:text="${security.short_name}"></td>
+                <td th:text="${security.shortName}"></td>
                 <td th:text="${security.secId}"></td>
                 <td th:text="${security.regNumber}"></td>
                 <td th:text="${security.emitentTitle}"></td>
