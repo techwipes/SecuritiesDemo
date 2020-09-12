@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Create security</title>
+</head>
+<body>
+<form action="#" th:action="@{/security-create}" th:object="${security}" method="post">
+    <label for="securityName">Security name</label>
+    <input type="text" th:field="*{securityName}" id="securityName" placeholder="Security name">
+    <label for="short_name">Short name</label>
+    <input type="text" th:field="*{short_name}" id="short_name" placeholder="Short name">
+    <label for="secId">Sec ID</label>
+    <input type="text" th:field="*{secId}" id="secId" placeholder="Sec ID">
+    <label for="regNumber">Reg number</label>
+    <input type="text" th:field="*{regNumber}" id="regNumber" placeholder="Reg number">
+    <label for="emitentTitle">Emitent title</label>
+    <input type="text" th:field="*{emitentTitle}" id="emitentTitle" placeholder="Emitent title">
+    <input type="submit" value="Create Security">
+</form>
+</body>
+</html>
+
+
+
