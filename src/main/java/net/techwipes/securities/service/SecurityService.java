@@ -3,9 +3,12 @@ package net.techwipes.securities.service;
 import net.techwipes.securities.model.Security;
 import net.techwipes.securities.repository.SecurityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+
+@Service
 public class SecurityService {
 
 
